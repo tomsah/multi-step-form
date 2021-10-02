@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "target": "es2020",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true, //allow JavaScript files to be compiled
+    "allowSyntheticDefaultImports": true, //allows default imports from modules with no default export
+    "skipLibCheck": true, //skip type checking of all the type declaration files (*.d.ts)
+    "esModuleInterop": true, //enables compatibility with Babel.
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "classnameTransform": "dashes",
+          "customMatcher": "\\.module\\.css$"
+        }
+      }
+    ]
+  },
+  "files": [
+    "webpack.dev.config.ts",
+    "webpack.prod.config.ts",
+    "jest-setup.ts",
+    "jest.config.ts",
+    "custom.d.ts"
+  ],
+  "include": [".eslintrc.js", "src/**/*", "utils/**/*"],
+  "exclude": ["node_modules"]
+}
