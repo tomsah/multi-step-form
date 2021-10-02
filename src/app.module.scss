@@ -1,3 +1,30 @@
-.wrapper {
+.container {
+  border: 1px solid black;
+  max-width: 80%;
+  padding: 10px;
+  margin: 0 auto;
+
+  form {
+    input {
+      width: 100%;
+      padding: 0;
+      margin: 10px auto;
+    }
+    .checkbox input {
+      width: auto;
+    }
+  }
+}
+
+input:focus {
+  outline: 2px solid royalblue;
+  box-shadow: 1px 1px 8px 1px royalblue;
+}
+
+.hidden {
+  display: none;
+}
+
+.hint {
   color: red;
 }

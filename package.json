@@ -15,7 +15,7 @@
     "prepare": "husky install",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|jsx|js|json)\"",
     "start": "webpack serve --open --config webpack.dev.config.ts",
-    "test": "jest --config jest.config.ts",
+    "test": "jest --watch --config jest.config.ts",
     "validate": "npm-run-all --parallel check-types check-format lint build"
   },
   "devDependencies": {

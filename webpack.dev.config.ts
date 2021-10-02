@@ -84,6 +84,7 @@ const config: Configuration = {
     new ESLintPlugin({
       extensions: ['js', 'jsx', 'ts', 'tsx'],
       exclude: 'node_modules',
+      emitWarning: true,
     }),
   ],
   devtool: 'inline-source-map',
@@ -93,6 +94,9 @@ const config: Configuration = {
     port: 8080,
     open: true,
     hot: true,
+    client: {
+      overlay: false,
+    },
   },
 }
 
