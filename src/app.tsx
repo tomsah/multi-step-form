@@ -1,16 +1,34 @@
 import React, {useState, ReactElement} from 'react'
 import form from './app.module.scss'
+import {useDispatch, useSelector} from 'react-redux'
+import {RootState} from './store'
+import {
+  setName,
+  setEmail,
+  setPassword,
+  setReceivedUpdate,
+  setReceivedCom,
+} from './rootSlice'
 
 function App(): ReactElement {
   const [username, setUsername] = useState<string>('')
   const [role, setRole] = useState<string>('')
-  const [email, setEmail] = useState<string>('')
-  const [password, setPassword] = useState<string>('')
+  const [email, setEmailField] = useState<string>('')
+  const [password, setPasswordField] = useState<string>('')
   const [isUpdatesChecked, setIsUpdatesChecked] = useState<boolean>(false)
   const [isComChecked, setIsComChecked] = useState<boolean>(false)
 
+  const dispatch = useDispatch()
+  const name = useSelector((state: RootState) => state.name)
+  console.log('Name selector', name)
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    dispatch(setName(username))
+    dispatch(setEmail(email))
+    dispatch(setPassword(password))
+    dispatch(setReceivedUpdate(isUpdatesChecked))
+    dispatch(setReceivedCom(isComChecked))
     console.log({
       username,
       role,
@@ -43,14 +61,14 @@ function App(): ReactElement {
           type="email"
           name="email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setEmailField(e.target.value)}
         />
         <label htmlFor="email">Password:</label>
         <input
           type="password"
           name="password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => setPasswordField(e.target.value)}
         />
         {/* ---- STEP-2 PRIVACY ----*/}
         <div className={form.checkbox}>
