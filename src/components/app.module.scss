@@ -28,3 +28,7 @@ input:focus {
 .hint {
   color: red;
 }
+
+.disabled-link {
+  pointer-events: none;
+}

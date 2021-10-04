@@ -14,6 +14,9 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
+    "paths": {
+      "test-utils": ["./utils/test-utils"]
+    },
     "plugins": [
       {
         "name": "typescript-plugin-css-modules",
@@ -31,6 +34,6 @@
     "jest.config.ts",
     "custom.d.ts"
   ],
-  "include": [".eslintrc.js", "src/**/*", "utils/**/*"],
+  "include": [".eslintrc.js", "src/**/*", "utils/**/*", "features/**/*"],
   "exclude": ["node_modules"]
 }

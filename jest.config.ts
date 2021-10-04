@@ -9,7 +9,7 @@ const config: Config.InitialOptions = {
   },
   modulePaths: ['<rootDir>/src'],
   setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
-  testEnvironment: 'jsdom',
+  testEnvironment: 'jest-environment-jsdom',
   verbose: true,
 }
 export default config

@@ -1,8 +1,14 @@
 import {configureStore} from '@reduxjs/toolkit'
-import {reducer} from './rootSlice'
+import currentStepReducer from './slices/formProgress'
+import userInfoReducer from './slices/userInfo'
+import userPrivacyReducer from './slices/userPrivacy'
 
 export const store = configureStore({
-  reducer,
+  reducer: {
+    userInfo: userInfoReducer,
+    userPrivacy: userPrivacyReducer,
+    currentStep: currentStepReducer,
+  },
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

@@ -31,6 +31,8 @@ the code transpilation.
 - `@babel/preset-react`: Enable Babel to transform React code into JavaScript.
 - `@babel/preset-typescript`: Enables Babel to transform TypeScript code into
   JavaScript.
+- `@reduxJS/toolkit`: The official, opinionated, batteries-included toolset for
+  efficient Redux development.
 - `@testing-library/jest-dom`: Provides a set of custom jest matchers that you
   can use to extend jest.
 - `@testing-library/react`: React testing library is a very lightweight solution
@@ -42,6 +44,10 @@ the code transpilation.
 - `@types/mini-css-extract-plugin`: Contains type definitions for
   mini-css-extract-plugin.
 - `@types/postcss-preset-env`: Contains type definitions for postcss-preset-env.
+- `@types/react`: Contains type definitions for React.
+- `@types/react-dom`: Contains type definitions for react-dom.
+- `@types/react-redux`: Contains type definitions for react-redux.
+- `@types/react-router-dom`: Contains type definitions for react-router-dom.
 - `@types/webpack-dev-server`: Types for the webpack-dev-server
 - `@typescript-eslint/eslint-plugin`: This contains some standard linting rules
   for TypeScript code.
@@ -75,6 +81,10 @@ the code transpilation.
 - `postcss-preset-env`: Convert modern CSS into something most browsers can
   understand.
 - `prettier`: Code formatter library.
+- `react` : JavaScript library for building user interfaces.
+- `react-dom`: React package for working with the DOM.
+- `react-redux`: React bindings for Redux.
+- `react-router-dom`: DOM bindings for React Router.
 - `sass-loader`: Loads a Sass/SCSS file and compiles it to CSS.
 - `style-loader`: Style loader module for webpack, inject CSS into the DOM.
 - `ts-loader`: TypeScript loader for webpack.
