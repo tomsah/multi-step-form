@@ -14,6 +14,9 @@ Through this project:
 - Playing with a bit of CSS to make thing looking nice
 - Using HTML5 validation form
 
+the app is deployed using netlify
+[here](https://modest-montalcini-9d6288.netlify.app/)
+
 ## What next
 
 there is a lot of missing pieces to this multistep form to be great
