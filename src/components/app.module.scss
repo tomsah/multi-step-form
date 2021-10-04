@@ -1,32 +1,37 @@
-.container {
-  border: 1px solid black;
-  max-width: 80%;
-  padding: 10px;
-  margin: 0 auto;
+@import '../styles/variables.scss';
 
-  form {
-    input {
-      width: 100%;
-      padding: 0;
-      margin: 10px auto;
-    }
-    .checkbox input {
-      width: auto;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: $poppins;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: $backgroundGradient;
+}
+
+.container {
+  width: 330px;
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 50px 35px 10px 35px;
+
+  header {
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
   }
 }
 
-input:focus {
-  outline: 2px solid royalblue;
-  box-shadow: 1px 1px 8px 1px royalblue;
-}
-
-.hidden {
-  display: none;
-}
-
-.hint {
-  color: red;
+a {
+  text-decoration: none;
 }
 
 .disabled-link {

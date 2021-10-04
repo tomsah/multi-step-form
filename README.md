@@ -1,3 +1,67 @@
+# Multi step form
+
+My take on a multi step form using React, redux toolkit, react router dom,
+Typescript, Jest and React testing library.
+
+Through this project:
+
+- I have explored, had fun and learned a tlot setting all the project config
+  manually. I am aiming to reuse this base to start future project, and I will
+  keep working to improve it.
+- Work for the first time with redux toolkit, it was very nice and straight
+  forwards to use.
+- Exploring deeper with Typescript, I did not have a big exposure to it,
+- Playing with a bit of CSS to make thing looking nice
+- Using HTML5 validation form
+
+## What next
+
+there is a lot of missing pieces to this multistep form to be great
+
+- Increasing the testing usage,
+- Improve validation error
+  - Creating a custom hook for field Validation (so can be tested)
+- Make the multi step form configurable,
+  - Probably using a custom hooks where you can pass options
+- Get a 404 route
+- Redirect to homepage if a user try to access step other than 1 via url
+- persists state using localStorage
+- improve typing across the app
+- improve webpack config for prod
+
+# Installing
+
+#### Prerequisites
+
+- [Git](https://git-scm.com/downloads)
+- [npm](https://www.npmjs.com/get-npm) or
+  [yarn](https://yarnpkg.com/getting-started/install)
+- [Node.js](https://nodejs.org/en/) >= 6.x
+
+1. In Terminal, clone the git project using
+   `$ git clone https://github.com/tomsah/MyReads.git`.
+2. Navigate to the root directory for the project.
+3. Run the command `yarn` or `npm install` to install the necessary dependencies
+4. Run the command `yarn start` or `npm run start` to start the server.
+
+- This will automatically open the website in your browser, otherwise visit
+  http://localhost:8080/
+
+# File Structure
+
+    ├── .husky              # pre commit, push, merge git hook script
+    ├── build               # Compiled files
+    ├── nodes_modules       # JS modules
+    ├── src                 # Source files
+    │   ├── components          # React component
+    │   ├── config              # Route config for react router dom
+    │   └── interfaces          # TypeScript interfaces
+    │   └── slices              # redux toolkit slice
+    │   └── styles              # style
+    ├── utils               # Automated tests
+    ├── LICENSE
+    └── README.md
+
 ## Note about the Setup
 
 We are only going to use `TypeScript` for type checking, and use `Babel` to do

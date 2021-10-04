@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import {useSelector} from 'react-redux'
 import {RootState} from '../../store'
+import style from './form.module.scss'
 
 const EndForm: React.FunctionComponent = () => {
   const {userInfo, userPrivacy} = useSelector((state: RootState) => state)
@@ -20,13 +21,12 @@ const EndForm: React.FunctionComponent = () => {
     console.log('the final data is:', displayData)
   })
   return (
-    <div>
-      <h1>Step 3</h1>
+    <div className={style.done}>
+      <h2>&#x2714;</h2>
       <p>
         Please verify your email address, you should have received an email from
         us already
       </p>
-      <pre>{JSON.stringify(displayData, null, 2)}</pre>
     </div>
   )
 }

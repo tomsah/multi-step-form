@@ -1,5 +1,5 @@
 import React from 'react'
-import form from './app.module.scss'
+import style from './app.module.scss'
 import {
   BrowserRouter,
   Route,
@@ -12,7 +12,8 @@ import StepProgress from './form/stepProgress'
 
 const App: React.FunctionComponent = () => {
   return (
-    <div className={form.container}>
+    <div className={style.container}>
+      <header>Sign up Form</header>
       <BrowserRouter>
         <StepProgress />
         <Switch>

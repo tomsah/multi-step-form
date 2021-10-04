@@ -1,0 +1,98 @@
+@import '../../styles/variables.scss';
+
+.form-outer {
+  width: 100%;
+  overflow: hidden;
+
+  form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .page {
+    width: 100%;
+  }
+
+  .title {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .field {
+    width: 97%;
+    height: 45px;
+    margin: 45px auto;
+    display: flex;
+    position: relative;
+  }
+
+  .label {
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+    span {
+      color: $pink;
+    }
+  }
+
+  .label-checkbox {
+    font-weight: 500;
+    font-weight: 500;
+    width: 90%;
+    align-self: center;
+    text-align: left;
+    padding-left: 10px;
+  }
+
+  input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid $lightgrey;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 18px;
+    &:focus {
+      outline: 2px solid $blue;
+      box-shadow: 1px 1px 8px 1px $blue;
+    }
+  }
+
+  input[type='checkbox'] {
+    width: 10%;
+  }
+
+  button {
+    width: 100%;
+    height: calc(100% + 5px);
+    border: none;
+    background: $pink;
+    margin-top: -20px;
+    border-radius: 5px;
+    color: $white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+
+    &:hover {
+      &:not([disabled]) {
+        background: $black;
+      }
+    }
+
+    &[disabled] {
+      opacity: 0.6;
+    }
+  }
+}
+
+.done {
+  color: $pink;
+  h1 {
+    font-size: 50px;
+  }
+}

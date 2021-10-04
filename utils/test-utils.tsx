@@ -2,9 +2,16 @@ import {render, RenderOptions, RenderResult} from '@testing-library/react'
 import React, {ReactElement, FC} from 'react'
 import {store} from '../src/store'
 import {Provider} from 'react-redux'
+import {Router} from 'react-router-dom'
+import {createMemoryHistory} from 'history'
 
 const AllTheProviders: FC = ({children}) => {
-  return <Provider store={store}>{children}</Provider>
+  const history = createMemoryHistory()
+  return (
+    <Provider store={store}>
+      <Router history={history}>{children}</Router>
+    </Provider>
+  )
 }
 
 const customRender = (
